@@ -1,4 +1,4 @@
-package com.crearo.water.repo
+package com.crearo.water.repo.consumed
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

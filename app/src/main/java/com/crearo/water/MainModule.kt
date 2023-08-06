@@ -5,7 +5,7 @@ import android.app.usage.UsageStatsManager
 import android.content.Context
 import androidx.room.Room
 import com.crearo.water.repo.AppDatabase
-import com.crearo.water.repo.WaterConsumedDao
+import com.crearo.water.repo.consumed.WaterConsumedDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

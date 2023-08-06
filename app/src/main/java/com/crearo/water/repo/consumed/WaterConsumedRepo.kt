@@ -1,4 +1,4 @@
-package com.crearo.water.repo
+package com.crearo.water.repo.consumed
 
 import com.crearo.water.zextras.dayEnd
 import com.crearo.water.zextras.dayStart

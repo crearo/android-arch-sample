@@ -1,4 +1,4 @@
-package com.crearo.water.repo
+package com.crearo.water.repo.consumed
 
 import androidx.room.Dao
 import androidx.room.Insert
