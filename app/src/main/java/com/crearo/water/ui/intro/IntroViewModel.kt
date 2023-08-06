@@ -26,7 +26,7 @@ class PermissionsViewModel @Inject constructor(private val introRepo: IntroRepo)
             introRepo.getStage().collect { newStage ->
                 run {
                     stageInt = newStage
-                    if (newStage == 3) {
+                    if (newStage == 4) {
                         _navigation.value =
                             NavEvent(IntroFragmentDirections.actionIntroFragmentToHomeFragment())
                     } else {
@@ -52,7 +52,7 @@ class PermissionsViewModel @Inject constructor(private val introRepo: IntroRepo)
         SECOND(2, "Second Title", "Again"),
 
         /**Third*/
-        THIRD(3, "Third Title", "Finish");
+        THIRD(3, "Third Title", "Done");
 
         companion object {
             fun get(number: Int): Stage {
