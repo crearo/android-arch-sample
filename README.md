@@ -28,3 +28,4 @@ excellent [Guide to Architecture](https://developer.android.com/topic/architectu
 
 (I'm adding this section just because I like it when I open a repo and see screenshots and videos.)
 
+![gif](screenshots/gif.gif)
