@@ -13,6 +13,6 @@ interface WaterConsumedDao {
     suspend fun insert(waterConsumed: WaterConsumed)
 
     @Query("SELECT SUM(amount) FROM WaterConsumed WHERE time >= :startOfDayMillis AND time <= :endOfDayMillis")
-    suspend fun getTotalWaterConsumed(startOfDayMillis: Long, endOfDayMillis: Long): Flow<Long>
+    fun getTotalWaterConsumed(startOfDayMillis: Long, endOfDayMillis: Long): Flow<Long>
 
 }
