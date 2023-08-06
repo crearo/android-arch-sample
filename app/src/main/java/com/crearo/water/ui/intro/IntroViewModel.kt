@@ -1,4 +1,4 @@
-package com.crearo.water.ui.permissions
+package com.crearo.water.ui.intro
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
