@@ -26,10 +26,4 @@ class IntroFragment : Fragment() {
         return binding.root
     }
 
-    override fun onResume() {
-        super.onResume()
-        viewModel.loadUi()
-        viewModel.navigateIfComplete()
-    }
-
 }
