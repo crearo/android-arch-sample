@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.crearo.water.ui.intro.PermissionsViewModel" />
+            type="com.crearo.water.ui.intro.IntroViewModel" />
     </data>
 
     <LinearLayout

@@ -12,7 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class IntroFragment : Fragment() {
-    private val viewModel: PermissionsViewModel by viewModels()
+    private val viewModel: IntroViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

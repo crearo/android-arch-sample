@@ -14,7 +14,7 @@ import javax.inject.Inject
 data class UiState(var title: String, var buttonText: String)
 
 @HiltViewModel
-class PermissionsViewModel @Inject constructor(private val introRepo: IntroRepo) : BaseViewModel() {
+class IntroViewModel @Inject constructor(private val introRepo: IntroRepo) : BaseViewModel() {
 
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState> = _uiState
