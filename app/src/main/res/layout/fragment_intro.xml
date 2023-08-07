@@ -24,13 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="@{viewModel.uiState.title}" />
+            android:text="@{viewModel.uiState.stage.title}" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->viewModel.onButtonClick()}"
-            android:text="@{viewModel.uiState.buttonText}" />
+            android:onClick="@{()->viewModel.proceedStage()}"
+            android:text="@{viewModel.uiState.stage.action}" />
 
     </LinearLayout>
 

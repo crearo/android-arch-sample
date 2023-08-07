@@ -7,11 +7,11 @@ import com.crearo.water.repo.intro.IntroRepo
 import com.crearo.water.ui.BaseViewModel
 import com.crearo.water.ui.NavEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-data class UiState(var title: String, var buttonText: String)
+data class UiState(val stage: IntroViewModel.Stage)
 
 @HiltViewModel
 class IntroViewModel @Inject constructor(private val introRepo: IntroRepo) : BaseViewModel() {
@@ -31,20 +31,20 @@ class IntroViewModel @Inject constructor(private val introRepo: IntroRepo) : Bas
                             NavEvent(IntroFragmentDirections.actionIntroFragmentToHomeFragment())
                     } else {
                         val stage = Stage.get(newStage)
-                        _uiState.value = UiState(stage.title, stage.buttonText)
+                        _uiState.value = UiState(stage)
                     }
                 }
             }
         }
     }
 
-    fun onButtonClick() {
+    fun proceedStage() {
         viewModelScope.launch(Dispatchers.IO) {
             introRepo.setStage(stageInt + 1)
         }
     }
 
-    enum class Stage(val number: Int, val title: String, val buttonText: String) {
+    enum class Stage(val number: Int, val title: String, val action: String) {
         /**First*/
         FIRST(1, "First Title", "Proceed"),
 
